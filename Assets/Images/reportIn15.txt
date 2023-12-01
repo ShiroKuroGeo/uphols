@@ -1,0 +1,48 @@
+Good morning, everyone. I am George Alfeser Inoc, and I am going to report
+on computer operation and the understanding of how computers work.
+Computer operation is to execute tasks and functions.
+These operations are the core functions that enable
+computer to process data, run applications, and provide output to users.
+
+
+Computer operations are vital for productivity and data management.
+communication, automation, problem solving, and innovation
+
+So what is a computer? A computer is an electronic device that processes
+store and manipulate data and calculations, including on phones, laptops, calculators, and many more.
+
+There are eight primary functions, summarized as follows:
+The input where a computer receives data and commands from a user, such as a keyboard, mouse, touchpad, or touchscreen
+and voice recognition system.
+The CPU, or central processing unit, is where computers perform complex calculations and execute instructions.
+and manage the flow of data within the computer system.
+The storage where computers store vast amounts of data, including files, documents, and many more
+the data that you stored temporarily in random access memory, RAM, or on an HDD or SSD
+The output is where computers can provide information and results to users through output devices such as monitors, printers, speakers, and displays.
+Communication: Where a computer connects to a network or the internet, that allows the user to communicate with others through sending and receiving
+Automation is where computers can automate repetitive tasks by executing predefined instructions, minimizing errors and manual effort.
+and increases efficiency.
+Information processing is where computers are capable of processing and analyzing volumes of data.
+and lastly, multimedia, where computers handle multimedia content, including audio, video, and graphics.
+
+Hardware and Software Comparison: These two are fundamental components of a computer system.
+
+So what are the differences between hardware and software?
+hardware has 
+Physical components where you can touch these parts, such as the keyboard, mouse, monitor, and many more
+the fixed and static, where you can't change its function unless physically modified or replaced.
+It is essential for operation, so without hardware components like the CPU and motherboard, a computer cannot function.
+Physical limitations such as the speed of the process, storage capacity, and connectivity
+Examples of hardware components include the motherboard, graphics card, mouse, and power supply.
+
+Meanwhile, software has
+programs and instructions that tell hardware what to do
+a dynamic and modifiable system that can be modified, updated, and replaced without physical hardware, like, for example, installing
+new application update and operating system add feature to a computer or fixing bug
+Hardware is dependent on hardware, so without hardware, software cannot provide functionality; the hardware processes the software instructions to perform tasks.
+Scalability developers create software to run on a wide range of hardware configurations, from personal computers to phones.
+
+
+
+
+

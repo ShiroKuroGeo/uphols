@@ -1,0 +1,89 @@
+System Functions Marks
+
+Authentication
+	-> Login
+	-> Register
+	-> Forgot Password(using code)
+	-> Contact Us
+	-> Change Password
+	-> View Notifications
+	-> Logout
+
+Customer
+	
+	Landing Page
+		-> Add to carts
+		-> Buy products
+	
+	Request Repair and Customized
+		-> Create Customized
+		-> Request Repair
+
+	Profile
+		-> Update Profile Picture
+		-> Update Personal Details
+		-> View Total
+
+	Orders
+		-> View Total Orders
+		-> Request Cancellation
+		-> Search Order
+		-> Sort Items
+
+	Address
+		-> Store Address
+		-> View Address
+		-> Delete Address
+	
+	Carts
+		-> Add Cart from (index and recommendation)
+		-> Update Quantity
+		-> Remove Cart
+		-> Purchase All Carts
+		-> Purchase Selected Carts
+		-> View Recommendation Products
+
+Admin Side
+	
+	Dashboard
+		-> View Count Members
+		-> View Count Product
+		-> View Count Orders
+		-> View Count Recommendation
+		-> View All Latest Members
+		-> View All Latest Products
+		-> View Charts
+
+	Users
+		-> Search User
+		-> View Count Users
+		-> View Users Information
+		-> View Users Information(Recent Cart)
+		-> View Users Information(Recent Order)
+		-> Update User Visibility
+
+	Request
+		-> View Charting
+		-> View Customer then Invoice
+		-> Update Invoice Status
+
+	Orders
+		-> View Count Orders
+		-> View Customer then Orders
+		-> View Invoice
+		-> Update Status (All, Single)
+
+	Products
+		-> Search Products
+		-> Delete Products
+		-> Update Products
+		-> Add Products
+
+	Designs
+		-> Search Designs
+		-> Add Designs
+		-> Delete Designs
+		-> Update Designs
+
+	Recommendation
+		-> View Recommendations
