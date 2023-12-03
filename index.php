@@ -17,18 +17,18 @@ include("Frontend/Components/Header.php");
             <div class="row gx-5 justify-content-between">
                 <div class="col-lg-6">
                     <div>
-                        <h1 class="display-4 fw-bolder text-primary mb-2">Professional upholstery services for all your furniture needs.</h1>
-                        <p class="fs-4 text-primary mb-4">We pride ourselves on providing excellent
+                        <h1 class="display-4 fw-bolder mb-2">Professional upholstery services for all your furniture needs.</h1>
+                        <p class="fs-4 mb-4">We pride ourselves on providing excellent
                             customer service, top-quality workmanship,
                             and competitive prices.
                         </p>
                         <div class="d-grid gap-3 d-sm-flex">
-                            <a class="btn btn-primary shadow text-dark btn-sm px-4 me-sm-3" href="#features">Get Started --></a>
+                            <a class="btn btn-primary shadow text-dark btn-md px-4 me-sm-3 col-6" href="#features">Get Started</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="text-center my-5">
+                    <div class="text-center">
                         <img src="/uphols/Assets/Images/illustrationUpholstery.png" class="col-12" alt="Upholstery illustration">
                     </div>
                 </div>
@@ -106,8 +106,8 @@ include("Frontend/Components/Header.php");
             <div class="row gx-5">
                 <div class="d-flex justify-content-center mb-5 text-center">
                     <span class="col-10" data-aos="fade-down">
-                        <span class="d-flex justify-content-center h4">For Artist, by Artist</span>
-                        <span class="fw-normal text-center h6">
+                        <span class="d-flex justify-content-center h1">For Artist, by Artist</span>
+                        <span class="fw-normal text-center h3">
                             We're a small group, 3rd year college student in Cordova Public College.
                             One of us is a working student, all of us have the same talent in singing as well as coding.
                             We've worked hard to graduate with degree where we do big things. We're here to
@@ -116,7 +116,6 @@ include("Frontend/Components/Header.php");
                     </span>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0 text-center">
-                    <!-- Picture and Desciption -->
                     <img src="/uphols/Assets/Images/georgeAlfeser.png" class="mt-2" alt="George Alfeser Inoc" width="200" height="200" data-aos="fade-right">
                     <div class="text-center" data-aos="fade-right">
                         <span class="fw-bold text-title">Inoc, George Alfeser</span><br>
@@ -132,7 +131,6 @@ include("Frontend/Components/Header.php");
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0 text-center">
-                    <!-- Picture and Desciption -->
                     <img src="/uphols/Assets/Images/divineYabo.png" class="mt-2" alt="Divine Yabo" width="200" height="200" data-aos="fade-up">
                     <div class="text-center" data-aos="fade-up">
                         <span class="fw-bold text-title">Yabo, Divine</span><br>
@@ -148,7 +146,6 @@ include("Frontend/Components/Header.php");
                     </div>
                 </div>
                 <div class="col-lg-4 mb-5 mb-lg-0 text-center">
-                    <!-- Picture and Desciption -->
                     <img src="/uphols/Assets/Images/loberanesJonathan.png" class="mt-2" alt="Jonathan Loberanes" width="200" height="200" data-aos="fade-left">
                     <div class="text-center" data-aos="fade-left">
                         <span class="fw-bold text-title">Loberanes, Jonathan jr,</span><br>
@@ -167,7 +164,6 @@ include("Frontend/Components/Header.php");
             </div>
         </div>
     </section>
-    <!-- Testimonials section-->
     <section class="py-5 border-bottom" id="contactUs">
         <div class="container px-5 my-5 px-5">
             <div class="text-center mb-5">

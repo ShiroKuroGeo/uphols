@@ -48,12 +48,12 @@ if (isset($_SESSION['user_id'])) {
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold  ">
-                    <li class="nav-item"><a class="nav-link text-primary fw-normal hover-line-border" aria-current="page" href="#!">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary fw-normal hover-line-border" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary fw-normal hover-line-border" href="#projects">Project</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary fw-normal hover-line-border" href="#aboutUS">About Us</a></li>
-                    <li class="nav-item me-4"><a class="nav-link text-primary fw-normal hover-line-border" href="#contactUs">Contact Us</a></li>
-                    <li class="nav-item"><a class="nav-link text-primary fw-normal hover-line-border" href="/uphols/Authentication/login.php">Login</a></li>
+                    <li class="nav-item"><a class="nav-link  fw-bold hover-line-border" aria-current="page" href="#!">Home</a></li>
+                    <li class="nav-item"><a class="nav-link  fw-bold hover-line-border" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link  fw-bold hover-line-border" href="#projects">Project</a></li>
+                    <li class="nav-item"><a class="nav-link  fw-bold hover-line-border" href="#aboutUS">About Us</a></li>
+                    <li class="nav-item me-4"><a class="nav-link  fw-bold hover-line-border" href="#contactUs">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link  fw-bold hover-line-border" href="/uphols/Authentication/login.php">Login</a></li>
                 </ul>
             </div>
         </div>

@@ -36,7 +36,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                             <span class="fs-6 text-uppercase fw-semibold">Products</span>
                                         </div>
                                         <div>
-                                            <span class="p-1 me-2 "><a href="Products/index.php" class="text-light"><i class="fa-solid fa-box-open fa-2x" style="color: #023047;"></i></a></span>
+                                            <span class="p-1 me-2 "><a href="Products/index.php" class="text-light"><i class="fa-solid fa-box-open fa-2x" style="color: #139a74"></i></a></span>
                                         </div>
                                     </div>
                                     <h2 class="fw-bold mb-1">
@@ -53,7 +53,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                             <span class="fs-6 text-uppercase fw-semibold">Orders</span>
                                         </div>
                                         <div>
-                                            <span class="p-1 me-2 "><a href="Orders/index.php" class="text-light"><i class="fa-solid fa-arrow-trend-up fa-2x" style="color: #023047;"></i></a></span>
+                                            <span class="p-1 me-2 "><a href="Orders/index.php" class="text-light"><i class="fa-solid fa-arrow-trend-up fa-2x" style="color: #139a74"></i></a></span>
                                         </div>
                                     </div>
                                     <h2 class="fw-bold mb-1">
@@ -70,7 +70,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                             <span class="fs-6 text-uppercase fw-semibold">Recommend</span>
                                         </div>
                                         <div>
-                                            <span class="p-1 me-2 "><a href="Recommendation/index.php" class="text-light"><i class="fa-solid fa-comments fa-2x" style="color: #023047;"></i></a></span>
+                                            <span class="p-1 me-2 "><a href="Recommendation/index.php" class="text-light"><i class="fa-solid fa-comments fa-2x" style="color: #139a74"></i></a></span>
                                         </div>
                                     </div>
                                     <h2 class="fw-bold mb-1">
@@ -87,7 +87,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                             <h4 class="mb-0">Sales</h4>
                                         </div>
                                         <div class="">
-                                            <i class="far fa-chart-bar fa-2x" style="color: #023047;"></i>
+                                            <i class="far fa-chart-bar fa-2x" style="color: #139a74"></i>
                                         </div>
                                     </div>
                                 </div>
