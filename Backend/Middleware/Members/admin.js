@@ -557,7 +557,6 @@ const order = createApp({
             data.append("gmail", gmail);
             axios.post('/uphols/Backend/Routes/Members/Admin/orders.php', data)
                 .then(function (r) {
-                    alert(r.data);
                     this.getSelectedCustomerOrder();
                     if (r.data == 400) {
                         toastr.error('Something is missing!');
@@ -572,7 +571,6 @@ const order = createApp({
             data.append("customerId", customerId);
             axios.post('/uphols/Backend/Routes/Members/Admin/transactions.php', data)
                 .then(function (r) {
-                    alert(r.data);
                     this.getSelectedCustomerOrder();
                     if (r.data == 400) {
                         toastr.error('Something is missing!');

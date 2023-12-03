@@ -99,7 +99,11 @@ const CustomerLandingPage = createApp({
                     data.append('quantity', quantity);
                     axios.post('/uphols/Backend/Routes/Members/Customer/order.php', data)
                         .then(function (r) {
-                            alert(r.data);
+                            if(r.data == 200){
+
+                            }else{
+                                toastr.error('Purchasing Failed!');
+                            }
                         });
                 } else {
                     var data = new FormData();
@@ -109,11 +113,15 @@ const CustomerLandingPage = createApp({
                     data.append('quantity', quantity);
                     axios.post('/uphols/Backend/Routes/Members/Customer/order.php', data)
                         .then(function (r) {
-                            alert(r.data);
+                            if(r.data == 200){
+                                toastr.success('Purchasing Success!');
+                            }else{
+                                toastr.error('Purchasing Failed!');
+                            }
                         });
                 }
             } else {
-                alert('Select an Address');
+                toastr.error('Select an Address');
             }
         },
         getUserAddress: function () {
@@ -416,7 +424,7 @@ const CustomerCart = createApp({
                             .then(function (r) {
                                 if (r.data == 200) {
                                     if (r.data == 200) {
-                                        alert("Purchased!");
+                                        toastr.success("Purchased!");
                                         for (let i = 0; i < all.length; i++) {
                                             popoverButton.setAttribute('data-bs-content', 'Successfully added to your order');
                                             vue.removeThisData(all[i]);
@@ -813,7 +821,7 @@ const profileCustomer = createApp({
                             document.getElementById('TheSameOldCode').classList.remove('visually-hidden');
                             window.location.reload();
                         }else{
-                            alert("Code Not Updated!");
+                            toastr.error("Code Not Updated!");
                         }
                     })
             }else{
