@@ -99,7 +99,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                                             <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
                                                         </a>
                                                         <span class="dropdown-menu" aria-labelledby="orderDropdownOne">
-                                                            <button :class="orders.order_status == 3 ? 'btn btn-sm col-12' : 'visually-hidden'" @click="requestCancel(orders.id)">Request Cancel</button>
+                                                            <button :class="orders.order_status == 3 ? 'btn btn-sm col-12' : 'visually-hidden'" @click="getId(orders.id)" data-bs-toggle="modal" data-bs-target="#requestCancel">Request Cancel</button>
                                                             <button :class="orders.order_status == 4 ? 'btn btn-sm col-12' : 'visually-hidden'" @click="backToPending(orders.id)">Back to Pending</button>
                                                             <button :class="orders.order_status == 1 ? 'btn btn-sm col-12' : 'visually-hidden'">This item is Approved already.</button>
                                                             <button :class="orders.order_status == 2 ? 'btn btn-sm col-12' : 'visually-hidden'">I'm sorry this item is decline.</button>
@@ -109,6 +109,23 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                             </tr>
                                         </tbody>
                                     </table>
+                                    <div class="modal fade" id="requestCancel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title" id="exampleModalLabel">Cancel Order</h5>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Are you sure want to cancel this order? 
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                                                    <button type="button" class="btn btn-primary" @click="requestCancel(idCancel)">Yes</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <table class="table mb-0 text-nowrap table-hover table-centered mx-0" v-if="selectedSort == 2">
                                         <thead class="table-light">
                                             <tr>

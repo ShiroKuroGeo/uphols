@@ -56,9 +56,13 @@ class orderController
         return $this->updateQuantityInDecline($orderId, $status, $customerId);
     }
 
-    // public function requestCancel($status, $user_id){
-    //     return $this->updateStatusRequest($status, $user_id);
-    // }
+    public function requestCancel($status, $user_id){
+        return $this->updateStatusRequest($status, $user_id);
+    }
+    
+    public function cancelOrder($orderId){
+        return $this->cancelOrderFunction($orderId);
+    }
 
     private function countAll($user_id)
     {
@@ -250,6 +254,30 @@ class orderController
             return $th;
         }
     }
+    
+    private function cancelOrderFunction($orderId)
+    {
+        try {
+            $db = new Database();
+            if ($db->getStat()) {
+                $order = new Orders();
+                $stmt = $db->getCon()->prepare($order->cancelOrderFunction());
+                $stmt->execute(array($orderId));
+                $result = $stmt->fetch();
+                $db->closeCon();
+
+                if (!$result) {
+                    return 200;
+                } else {
+                    return 400;
+                }
+            } else {
+                return 401;
+            }
+        } catch (PDOException $th) {
+            return $th;
+        }
+    }
 
     private function allApproveCustomersOrder($status, $orderId, $customer, $gmail)
     {
@@ -269,7 +297,6 @@ class orderController
                     $email = require __DIR__ . "/mailer.php";
                     $email->setFrom('VILLARUBIAUPHOLSTERY@gmail.com');
                     $email->addAddress($gmail);
-                    //Content
                     $email->isHTML(true);
                     $email->Subject = 'Your Item is......';
                     $email->Body = <<<END
@@ -308,27 +335,27 @@ class orderController
         }
     }
 
-    // private function updateStatusRequest($status, $user_id){
-    //     try {
-    //         $db = new Database();
-    //         if($db->getStat()){
-    //             $order = new Orders();
-    //             $stmt = $db->getCon()->prepare($order->updateStatusRequest());
-    //             $stmt->execute(array($status, $user_id));
-    //             $result = $stmt->fetch();
-    //             $db->closeCon();
+    private function updateStatusRequest($status, $user_id){
+        // try {
+        //     $db = new Database();
+        //     if($db->getStat()){
+        //         $order = new Orders();
+        //         $stmt = $db->getCon()->prepare($order->updateStatusRequest());
+        //         $stmt->execute(array($status, $user_id));
+        //         $result = $stmt->fetch();
+        //         $db->closeCon();
 
-    //             if(!$result){
-    //                 return 200;
-    //             }else{
-    //                 return 400;
-    //             }
-    //         }else{
-    //             return 401;
-    //         }
-    //     } catch (PDOException $th) {
-    //         return $th;
-    //     }
-    // }
+        //         if(!$result){
+        //             return 200;
+        //         }else{
+        //             return 400;
+        //         }
+        //     }else{
+        //         return 401;
+        //     }
+        // } catch (PDOException $th) {
+        //     return $th;
+        // }
+    }
 
 }

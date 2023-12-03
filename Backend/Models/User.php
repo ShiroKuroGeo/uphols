@@ -103,6 +103,10 @@
         public function changePasswordQueryEmail(){
             return $this->changePasswordQueryEmailQuery();
         }
+        
+        public function changeOldCode(){
+            return $this->changeOldCodeQuery();
+        }
 
         // Privates
         private function selectAllUsersQuery(){
@@ -191,6 +195,10 @@
 
         private function verifyEmailQuery(){
             return "UPDATE `users` set `verifyEmail` = '' WHERE `verifyEmail` = ? AND `email` = ?";
+        }
+        
+        private function changeOldCodeQuery(){
+            return "UPDATE `users` set $this->forgotCode = ? WHERE $this->forgotCode = ? AND `user_id` = ?";
         }
     }
 ?>

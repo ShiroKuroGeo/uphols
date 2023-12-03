@@ -4,19 +4,24 @@ $pageTitle = $_SESSION['firstname'];
 
 include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/adminFullNav.php');
 ?>
+<style>
+    .newPrimary {
+        color: #139a74;
+    }
+</style>
 <section class="container-fluid p-4" id="product-admin">
     <div class="row ">
         <div class="col-lg-12 col-md-12 col-12">
             <div class="border-bottom pb-3 mb-3 d-md-flex align-items-center justify-content-between">
                 <div class="mb-3 mb-lg-0">
-                    <h1 class="mb-0 h2 fw-bold">Products <sup class="text-muted">({{searchProducts.length}})</sup></h1>
+                    <h1 class="mb-0 h2 fw-bold">Products <span class="fs-5 text-muted">({{ searchProducts.length }})</span></h1>
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="admin-dashboard.html">Dashboard</a>
+                                <a href="admin-dashboard.html" class="newPrimary">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="#">Product</a>
+                                <a href="#" class="newPrimary">Product</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Products

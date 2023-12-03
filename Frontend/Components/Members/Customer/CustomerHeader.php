@@ -52,7 +52,7 @@
                         <a class="btn btn-light btn-icon rounded-circle indicator indicator-primary text-muted" href="#" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="dropdownNotification">
+                        <div class="dropdown-menu dropdown-menu-lg-end dropdown-menu-lg" aria-labelledby="dropdownNotification">
                             <div style="width: 350px">
                                 <div class="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
                                     <span class="h4 mb-0">Notifications Order</span>

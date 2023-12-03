@@ -40,9 +40,11 @@ if (isset($_SESSION['user_id'])) {
                     <div class="card shadow-lg">
                         <div class="card-body p-4">
                             <div class="mb-3">
-                                <a href="../index.php">
-                                    <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
-                                </a>
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <a href="../index.php">
+                                        <img src="/uphols/Assets/Images/mainLogo.png" width="170" alt="UpholsteryLogo">
+                                    </a>
+                                </div>
                                 <h1 class="mb2 fs-4">Sign in</h1>
                                 <span class="fs-5">Don’t have an account? <a href="register.php" class="ms-1">Sign up</a></span>
                             </div>
@@ -62,7 +64,7 @@ if (isset($_SESSION['user_id'])) {
                                 </div>
                                 <div>
                                     <div class="d-grid">
-                                        <button type="submit" class="btn btn-primary ">Sign in</button>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
                                     </div>
                                 </div>
                             </form>

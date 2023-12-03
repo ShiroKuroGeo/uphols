@@ -4,6 +4,11 @@ $pageTitle = $_SESSION['firstname'];
 
 include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/adminFullNav.php');
 ?>
+<style>
+    .newPrimary {
+        color: #139a74;
+    }
+</style>
 <section class="container-fluid p-4" id="design-admin">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
@@ -13,10 +18,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="../index.php">Dashboard</a>
+                                <a href="../index.php" class="newPrimary">Dashboard</a>
                             </li>
                             <li class="breadcrumb-item">
-                                <a href="index.php">Design</a>
+                                <a href="index.php" class="newPrimary">Design</a>
                             </li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 List

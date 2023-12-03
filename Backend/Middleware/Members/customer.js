@@ -472,16 +472,19 @@ const profileCustomer = createApp({
             customerAddress: [],
             address_idssss: [],
             customerInfoHeader: [],
+            citiesOfCordova: [{value: 'Talisay City', name: 'Talisay City'},{value: 'Minglanilla', name: 'Minglanilla'},{value: 'Naga City', name: 'Naga City'},{value: 'San Fernando', name: 'San Fernando'},{value: 'Carcar City', name: 'Carcar City'},{value: 'Sibonga', name: 'Sibonga'},{value: 'Dalaguete', name: 'Dalaguete'},{value: 'Alegria', name: 'Alegria'},{value: 'Santander', name: 'Santander'},{value: 'Dumanjug', name: 'Dumanjug'},{value: 'Argao', name: 'Argao'},{value: 'Alcantara', name: 'Alcantara'},{value: 'Alcoy', name: 'Alcoy'},{value: 'Boljoon', name: 'Boljoon'},{value: 'Malabuyoc', name: 'Malabuyoc'},{value: 'Ronda', name: 'Ronda'},{value: 'Badian', name: 'Badian'},{value: 'Samboan', name: 'Samboan'},{value: 'Oslob', name: 'Oslob'},{value: 'Moalboal', name: 'Moalboal'},{value: 'Ginatilan', name: 'Ginatilan'},{value: 'Aloguinsan', name: 'Aloguinsan'},{value: 'Asturias', name: 'Asturias'},{value: 'Tuburan', name: 'Tuburan'},{value: 'Barili', name: 'Barili'},{value: 'Balamban', name: 'Balamban'},{value: 'Toledo City', name: 'Toledo City'},{value: 'Pinamungahan', name: 'Pinamungahan'},{value: 'Santa Fe', name: 'Santa Fe'},{value: 'Tabogon', name: 'Tabogon'},{value: 'Madridejos', name: 'Madridejos'},{value: 'Bantayan', name: 'Bantayan'},{value: 'Bogo City', name: 'Bogo City'},{value: 'Medellin', name: 'Medellin'},{value: 'San Remigio', name: 'San Remigio'},{value: 'Tabuelan', name: 'Tabuelan'},{value: 'Daanbantayan', name: 'Daanbantayan'},{value: 'Catmon', name: 'Catmon'},{value: 'Poro', name: 'Poro'},{value: 'Borbon', name: 'Borbon'},{value: 'Danao City', name: 'Danao City'},{value: 'Pilar', name: 'Pilar'},{value: 'Sogod', name: 'Sogod'},{value: 'Tudela', name: 'Tudela'},{value: 'San Francisc', name: 'San Francisco'},{value: 'Carmen', name: 'Carmen'},{value: 'Compostela', name: 'Compostela'},{value: 'Liloan', name: 'Liloan'},{value: 'Cordova', name: 'Cordova'},{value: 'Consolacion', name: 'Consolacion'},{value: 'Mandaue City', name: 'Mandaue City'}],
             user_id: '',
             firstname: '',
             lastname: '',
             username: '',
             password: '',
             email: '',
+            cities: '0',
             phone: '',
             status: '',
             code: '',
             role: '',
+            oldCode: '',
             progressing: 1,
             profilePicture: '',
             selectedAddressDelete: 0,
@@ -798,6 +801,26 @@ const profileCustomer = createApp({
                     }
                 })
         },
+        changeOldCode: function (id, old) {
+            if(id == old){
+                var vue = this;
+                var data = new FormData();
+                data.append('Method', 'changeOldCode');
+                data.append('oldCode', id);
+                axios.post('/uphols/Backend/Routes/Members/Customer/profile.php', data)
+                    .then(function (r) {
+                        if(r.data == 200){
+                            document.getElementById('TheSameOldCode').classList.remove('visually-hidden');
+                            window.location.reload();
+                        }else{
+                            alert("Code Not Updated!");
+                        }
+                    })
+            }else{
+                document.getElementById('NotTheSameOldCode').classList.remove('visually-hidden');
+            }
+            
+        },
     },
     created: function () {
         this.getAllInformation();
@@ -918,6 +941,7 @@ const customerOrder = createApp({
             customerAllOrder: 0,
             searchOrderNow: null,
             selectedSort: 1,
+            idCancel: 0,
         }
     },
     methods: {
@@ -1013,10 +1037,9 @@ const customerOrder = createApp({
         requestCancel: function (id) {
             var vue = this;
             var data = new FormData();
-            data.append('Method', 'requestCancel');
+            data.append('Method', 'cancelOrder');
             data.append('orderId', id);
-            data.append('status', 4);
-            axios.post('/Uphols/backend/Routes/Members/customer/order.php', data)
+            axios.post('/Uphols/backend/Routes/Members/customer/order.php', data)   
                 .then(function (r) {
                     vue.getCustomerOrder();
                 })
@@ -1035,6 +1058,10 @@ const customerOrder = createApp({
         dateToString: function (date) {
             let d = new Date(date);
             return d.toDateString();
+        },
+        getId: function (id){
+            var vue = this;
+            vue.idCancel = id;
         },
     },
     computed: {
@@ -1060,6 +1087,7 @@ const customerOrder = createApp({
         this.countAllOrderFromCustomer();
         this.getCustomerOrder();
         this.getCustomerRequest();
+        this.getId();
     }
 });
 
@@ -1073,6 +1101,8 @@ const request = createApp({
             selectedColor: 'selected',
             selectedFabric: 'selected',
             addressSelected: 0,
+            totalCheque: 1,
+            totalCheque: 0,
         }
     },
     methods: {
@@ -1132,7 +1162,7 @@ const request = createApp({
             var form = e.currentTarget;
             var data = new FormData(form);
             data.append('Method', 'storeRequest');
-            data.append('paymentTotalPrice', vue.cheque);
+            data.append('paymentTotalPrice', this.totalCheque);
             axios.post('/uphols/Backend/Routes/Members/Customer/request.php', data)
                 .then(function (r) {
                     if (r.data == 200) {
@@ -1142,7 +1172,7 @@ const request = createApp({
                         toastr.error('Costumize Project Form Failed Sent to Admin');
                         setTimeout(window.location.reload(), 5000);
                     } else {
-                        window.location.href = r.data;
+                        window.open(r.data, '_blank');
                     }
                 })
         },
@@ -1181,11 +1211,17 @@ const request = createApp({
             const selectedDesign = this.design.find(d => d.fabric === newtype);
             this.cheque += selectedDesign ? selectedDesign.fabricPrice : null;
         },
-
+        
     },
     created: function () {
         this.getUserAddress();
         this.getAllDesign();
+    },
+    computed: {
+        chequeDown() {
+            // this.chequeDowns = parseInt(this.cheque * 0.40);
+            return parseInt(this.cheque * 0.40);
+        }
     }
 });
 

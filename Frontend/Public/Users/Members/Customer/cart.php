@@ -160,7 +160,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
     </section>
     <!-- cart + summary -->
     <section>
-        <div class="container my-5">
+        <div class="container my-5" v-if="recommended != 0">
             <header class="mb-4">
                 <h3>Recommended items</h3>
             </header>

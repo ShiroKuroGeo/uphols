@@ -41,6 +41,9 @@ if (!isset($_SESSION['user_id'])) {
         .border-right {
             border-right: 1px solid gray;
         }
+        .newPrimary{
+            color: #139a74;
+        }
 
         <?php
         $sad = "color: white";

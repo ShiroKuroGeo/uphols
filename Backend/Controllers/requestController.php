@@ -93,6 +93,7 @@ class requestController
                         $checkoutUrl = $result['data']['attributes']['checkout_url'];
 
                         return $checkoutUrl;
+                        
                     }
                 } else {
                     return 400;

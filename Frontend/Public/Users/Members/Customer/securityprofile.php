@@ -38,6 +38,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                     <p class=" mb-0 d-block text-capitalize">{{ ins.email }}</p>
                                 </div>
                             </div>
+                            <div class="code">
+                                <span class="fw-bold">Code: </span>
+                                <span class="fst-italic">{{ins.code}}</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -145,6 +149,45 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                         </div>
                                         <button class="btn btn-primary mt-2">Change Password</button>
                                     </form>
+                                </div>
+                            </div>
+                            <hr class="my-5">
+                            <div>
+                                <h4 class="mb-0">Change Code Here</h4>
+                                <p>
+                                    If you feel unsecured about your code, you can change the code using old code.
+                                </p>
+                                <div class="form">
+                                    <div class="alert alert-danger visually-hidden" id="notMatch" role="alert">
+                                        Old Code is Error!
+                                    </div>
+                                    <div class="mb-3 col-lg-6 col-md-12 col-12" id="checkPassword">
+                                        <label class="form-label me-3" for="form2Example11">Old Code</label>
+                                        <input type="text" v-model="oldCode" class="form-control disabled" placeholder="Enter Old Code" />
+                                        <label class="form-label text-success visually-hidden" id="checked">&#10003;</label><br>
+                                        <button class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#oldCodeChangeConfirmation">Continue to Reset Code</button>
+
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="oldCodeChangeConfirmation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Confirmation to Change Code</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        Are you sure you want to change your code?
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <label class="form-label text-error visually-hidden" id="NotTheSameOldCode">&#10060;</label><br>
+                                                        <label class="form-label text-success visually-hidden" id="TheSameOldCode">&#10004;</label><br>
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary" @click="changeOldCode(oldCode, ins.code)">Save changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

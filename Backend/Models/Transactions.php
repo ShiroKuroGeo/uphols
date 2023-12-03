@@ -82,7 +82,7 @@
         }
 
         private function getDateDeliveryQuery(){
-            return "SELECT t.date_delivery AS deli, p.productName AS pn, u.username AS uname FROM `transactions` AS t INNER JOIN `products` AS p ON t.product_id = p.product_id INNER JOIN `users` AS u ON t.customer_id = u.user_id UNION SELECT re.date as deli, re.Types as pn, u.username as uname FROM `request` AS re INNER JOIN `users` as u ON re.customer_id = u.user_id;";
+            return "SELECT t.date_delivery AS deli, p.productName AS pn, u.username AS uname FROM `transactions` AS t INNER JOIN `products` AS p ON t.product_id = p.product_id INNER JOIN `users` AS u ON t.customer_id = u.user_id UNION SELECT re.dateDeliver as deli, re.Types as pn, u.username as uname FROM `request` AS re INNER JOIN `users` as u ON re.customer_id = u.user_id;";
         }
 
         private function onApproveQuery(){

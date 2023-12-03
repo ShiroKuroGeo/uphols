@@ -92,37 +92,43 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 visually-hidden">
                                                     <div class="form-group">
                                                         <label for="Region">Region</label>
-                                                        <input type="text" class="form-control form-control-md" value="Visayas" name="Region" id="Region" placeholder="Enter Region">
+                                                        <input type="text" class="form-control form-control-md" value="Visayas" name="Region" id="Region" placeholder="Enter Region" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                     <div class="form-group">
                                                         <label for="sTate">Province</label>
-                                                        <input type="text" class="form-control form-control-md" name="Province" id="Province" placeholder="Enter Province">
+                                                        <select class="form-control form-control-md" name="Province" id="Province" required>
+                                                            <option Selected>Province</option>
+                                                            <option value="Cebu">Cebu</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                     <div class="form-group">
                                                         <label for="ciTy">City</label>
-                                                        <input type="name" class="form-control form-control-md" name="City" id="City" placeholder="Enter City">
+                                                        <select class="form-control form-control-md" name="City" id="City" required>
+                                                            <option value="0">Select Country</option>
+                                                            <option v-for="cc of citiesOfCordova" :value="cc.value">{{cc.name}}</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                     <div class="form-group">
                                                         <label for="Barangay">Barangay</label>
-                                                        <input type="name" class="form-control form-control-md" name="Barangay" id="Barangay" placeholder="Enter Barangay">
+                                                        <input type="name" class="form-control form-control-md" name="Barangay" id="Barangay" placeholder="Enter Barangay" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                     <div class="form-group">
                                                         <label for="Street">Street Name</label>
-                                                        <input type="name" class="form-control form-control-md" name="Street" id="Street" placeholder="Enter Street">
+                                                        <input type="name" class="form-control form-control-md" name="Street" id="Street" placeholder="Enter Street" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                                     <div class="form-group">
                                                         <label for="zIp">Zip Code</label>
-                                                        <input type="text" class="form-control form-control-md" name="Zip" id="Zip" placeholder="Zip Code">
+                                                        <input type="text" class="form-control form-control-md" name="Zip" id="Zip" placeholder="Zip Code" required>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 mt-2 col-12">

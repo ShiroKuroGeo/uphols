@@ -4,7 +4,11 @@ $pageTitle = $_SESSION['firstname'];
 
 include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/adminFullNav.php');
 ?>
-
+<style>
+    .newPrimary {
+        color: #139a74;
+    }
+</style>
 <section class="container-fluid p-4" id="customer-admin">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
@@ -19,9 +23,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="../index.php">Dashboard</a>
+                                <a href="../index.php" class="newPrimary">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="#!">User</a></li>
+                            <li class="breadcrumb-item"><a href="#!" class="newPrimary">User</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Customers
                             </li>
@@ -55,7 +59,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                                 </div>
                                             </div>
                                             <a href="#" class="dropdown position-absolute mt-10 ms-n5" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="fa fa-cogs" aria-hidden="true"></i>
+                                                <i class="fa fa-cogs" style="color: #139a74" aria-hidden="true"></i>
                                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                                     <li><a class="dropdown-item" :href="'singleUser.php?user_id=' + cust.user_id" style="cursor: pointer">View Info</a></li>
                                                     <li><a class="dropdown-item" href="#" style="cursor: pointer" @click="editUser(cust.user_id)" class="btn btn-sm btn-primary mx-2" data-bs-toggle="modal" data-bs-target="#editUser">Change User Visibility</a></li>
@@ -80,7 +84,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                     </div>
                                     <div class="d-flex justify-content-between pt-2">
                                         <span>Code</span>
-                                        <span class="text-dark"> {{cust.code}} </span>
+                                        <span class="text-dark"> {{codeAt(cust.code)}} </span>
                                     </div>
                                 </div>
                             </div>

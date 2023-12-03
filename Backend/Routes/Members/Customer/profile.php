@@ -10,6 +10,11 @@
         echo "Function not Exist";
     }
 
+    function changeOldCode(){
+        $user = new userController();
+        echo $user->changeOldCode($_SESSION['user_id'], $_POST['oldCode']);
+    }
+
     function customersInformation(){
         $user = new userController();
         echo $user->customersInformation($_SESSION['user_id']);

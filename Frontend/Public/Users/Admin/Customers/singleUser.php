@@ -20,7 +20,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                             <li class="breadcrumb-item">
                                 <a href="#">Single User</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">
+                            <li class="breadcrumb-item active text-capitalize" aria-current="page">
                                 {{ user.lastname + ", " + user.firstname}}
                             </li>
                         </ol>
@@ -38,7 +38,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                         <div class="ms-4">
                             <h3 class="mb-1 text-capitalize">{{ user.lastname + ", " + user.firstname}}</h3>
                             <h3 class="text-muted fs-6 text-capitalize">Username: {{ user.username }}</h3>
-                            <h3 class="text-muted fs-6 text-capitalize">Code: {{ user.code }}</h3>
+                            <h3 class="text-muted fs-6 text-capitalize">Code: {{ codeAt(user.code) }}</h3>
                             <div>
                                 <span><i class="fa fa-calendar me-2" aria-hidden="true"></i>Customer since {{ dateToString(user.created_at) }} </span>
                             </div>

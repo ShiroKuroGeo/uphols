@@ -65,7 +65,7 @@ if (!isset($_SESSION['user_id'])) {
                         <a class="btn btn-light btn-icon rounded-circle indicator indicator-primary text-muted" href="#" role="button" id="dropdownNotification" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-bell" aria-hidden="true"></i>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg" aria-labelledby="dropdownNotification">
+                        <div class="dropdown-menu dropdown-menu-lg-end dropdown-menu-lg" aria-labelledby="dropdownNotification">
                             <div style="width: 350px">
                                 <div class="border-bottom px-3 pb-3 d-flex justify-content-between align-items-center">
                                     <span class="h4 mb-0">Notifications Order</span>
@@ -179,7 +179,7 @@ if (!isset($_SESSION['user_id'])) {
             <section class="bg-primary">
                 <div class="container py-5">
                     <div class="row align-items-center g-0 py-3">
-                        <div class="col-xl-5 col-lg-6 col-md-12">
+                        <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12">
                             <div class="py-7 py-lg-0">
                                 <h1 class="text-white display-4 fw-bold">
                                     Villarubia's Upholstery Service and Repair <br>
@@ -188,7 +188,7 @@ if (!isset($_SESSION['user_id'])) {
                                 <p class="text-white-50 mb-4 lead">
                                     We pride ourselves on providing excellent customer service, top-quality workmanship, and competitive prices.
                                 </p>
-                                <a href="requestType.php" class="btn btn-dark col-8">Request</a>
+                                <a href="requestType.php" class="btn btn-dark col-12 col-lg-6">Request</a>
                             </div>
                         </div>
                         <div class="col-xl-7 col-lg-6 col-md-12 text-lg-end text-center">
@@ -236,7 +236,7 @@ if (!isset($_SESSION['user_id'])) {
             </section>
         </header>
         <section>
-            <div class="container my-5">
+            <div class="container my-5" v-if="products != 0">
                 <header class="mb-4">
                     <h3>Recommended for you</h3>
                 </header>

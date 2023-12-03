@@ -15,6 +15,10 @@
             return $this->selectAllQuery();
         }
 
+        public function cancelOrderFunction(){
+            return $this->cancelOrderFunctionQuery();
+        }
+
         public function selectAllOrder(){
             return $this->selectAllOrderQuery();
         }
@@ -92,6 +96,10 @@
 
         private function orderUserChartQuery(){
             return "SELECT EXTRACT(MONTH FROM created_at) AS current_month, COUNT(*) AS totalIds FROM orders GROUP BY EXTRACT(MONTH FROM created_at) ORDER BY MAX(created_at) DESC LIMIT 5;";
+        }
+
+        private function cancelOrderFunctionQuery(){
+            return "DELETE FROM `orders` WHERE `id` = ?";
         }
 
     }

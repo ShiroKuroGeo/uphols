@@ -38,14 +38,13 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                             <div class="mb-3 col-md-6 col-12">
                                 <label class="form-label">Address</label>
                                 <select class="selectpicker form-control text-capitalize" name="Address" data-width="100%">
-                                    <option selected>Select Address</option>
+                                    <option selected>Select Address </option>
                                     <option v-for="ca of customerAddress" :value="ca.address_id">{{ ca.address_province + ", " + ca.address_city + ", " + ca.address_barangay + ", " + ca.address_street}}</option>
                                 </select>
                             </div>
                             <div class="mb-3 col-md-6 col-12">
                                 <label class="form-label">Payment Method</label>
                                 <select class="selectpicker form-control" name="paymentMethod" data-width="100%">
-                                    <option value="COD">COD</option>
                                     <option value="OTHER">Gcash, ETC.</option>
                                 </select>
                             </div>
@@ -56,7 +55,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                             <div class="col-md-8"></div>
                             <div class="col-12">
                                 <div class="float-start fw-bold text-dark my-auto">
-                                    Total Cheque: &#8369; {{ cheque }} <br> {{selectedTypePrize}}
+                                    <select class="form-control" v-model="totalCheque" @change="totalChequePayment" >
+                                        <option :value="cheque">Down Payment: &#8369;{{ cheque }}</option>
+                                        <option :value="chequeDown">Whole Payment &#8369;{{ chequeDown }}</option>
+                                    </select>
                                 </div>
                                 <div class="buttons float-end">
                                     <button class="btn btn-primary" type="submit">Submit</button>
@@ -65,7 +67,6 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>

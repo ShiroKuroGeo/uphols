@@ -26,6 +26,11 @@ class userController
         return $this->allCustomerOrder($user_id);
     }
 
+    public function changeOldCode($user_id, $oldCode)
+    {
+        return $this->changeOldCodeFunction($user_id, $oldCode);
+    }
+
     public function register($firstname, $lastname, $username, $password, $email, $phone, $profile)
     {
         return $this->AuthRegister($firstname, $lastname, $username, $password, $email, $phone, $profile);
@@ -139,7 +144,7 @@ class userController
                 if ($role > 0) {
                     if ($role == '3') {
                         if ($status == '1') {
-                            if ($verify == null) {
+                            if ($verify == 0) {
                                 $_SESSION['user_id'];
                                 $db->closeCon();
                                 return 3;
@@ -638,6 +643,36 @@ class userController
                 $user = new User();
                 $stmt = $db->getCon()->prepare($user->verifyEmail());
                 $stmt->execute(array($verificationEmail, $email));
+                $result = $stmt->fetch();
+                $db->closeCon();
+
+                if (!$result) {
+                    return 200;
+                } else {
+                    return 400;
+                }
+            } else {
+                return 400;
+            }
+        } catch (PDOException $th) {
+            return $th;
+        }
+    }
+
+    private function changeOldCodeFunction($user_id, $oldCode)
+    {
+        try {
+
+            $db = new Database();
+            if ($db->getStat()) {
+                $user = new User();
+                $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+                $code = '';
+                for ($i = 1; $i <= 10; $i++) {
+                    $code .= $characters[rand(0, strlen($characters) - 1)];
+                }
+                $stmt = $db->getCon()->prepare($user->changeOldCode());
+                $stmt->execute(array($code, $oldCode, $user_id));
                 $result = $stmt->fetch();
                 $db->closeCon();
 

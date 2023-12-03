@@ -4,6 +4,11 @@ $pageTitle = $_SESSION['firstname'];
 
 include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/adminFullNav.php');
 ?>
+<style>
+    .newPrimary {
+        color: #139a74;
+    }
+</style>
 <div id="order-admin" class="p-4">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-12">
@@ -18,9 +23,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="../index.php">Dashboard</a>
+                                <a href="../index.php" class="newPrimary">Dashboard</a>
                             </li>
-                            <li class="breadcrumb-item"><a href="#!">User</a></li>
+                            <li class="breadcrumb-item"><a href="#!" class="newPrimary">User</a></li>
                             <li class="breadcrumb-item active" aria-current="page">
                                 Orders
                             </li>
@@ -32,7 +37,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
     </div>
     <section class="content">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-lg-4 mb-3">
                 <div class="card panel-shadow h-100">
                     <div class="card col-12 h-100">
                         <div class="card-header d-flex justify-content-between">
@@ -49,7 +54,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                     </div>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-lg-8 mb-3">
                 <div class="card h-100">
                     <div class="card-header">
                         <h4 class="mb-0">Users Orders</h4>
@@ -75,6 +80,15 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                         <a :href="'invoice.php?invoice=' + or.customer_id">
                                             <button type="button" class="btn btn-primary btn-sm">Invoice</button>
                                         </a>
+                                    </td>
+                                </tr>
+                                <tr v-if="order == 0">
+                                    <td class="text-capitalize">No Data</td>
+                                    <td>
+                                        No Data
+                                    </td>
+                                    <td class="text-center">
+                                    No Data
                                     </td>
                                 </tr>
                             </tbody>

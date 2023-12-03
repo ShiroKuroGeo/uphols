@@ -22,10 +22,10 @@
         echo $order->getCustomerOrder($_SESSION['user_id']);
     }
     
-    function requestCancel(){
+    function cancelOrder(){
         $order = new orderController();
 
-        echo $order->getAllApproveCustomersOrder($_POST['status'], $_POST['orderId'], $_SESSION['user_id']);
+        echo $order->cancelOrder($_POST['orderId']);
     }
 
     function buyProduct(){

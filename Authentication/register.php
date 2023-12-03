@@ -40,9 +40,11 @@ if (isset($_SESSION['user_id'])) {
                     <div class="card shadow-lg" id="firstnameAndLast">
                         <div class="card-body p-6">
                             <div class="mb-3">
-                                <a href="../index.php">
-                                    <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
-                                </a>
+                                <div class="d-flex justify-content-center align-items-center mb-4">
+                                    <a href="../index.php">
+                                        <img src="/uphols/Assets/Images/mainLogo.png" width="170" alt="UpholsteryLogo">
+                                    </a>
+                                </div>
                                 <h1 class="mb2 fs-4">Sign up</h1>
                                 <span class="fs-5">Already have an account? <a href="login.php" class="ms-1">Sign in</a></span>
                                 <div class="d-flex justify-content-between mt-2">
@@ -76,7 +78,7 @@ if (isset($_SESSION['user_id'])) {
                     </div>
                     <div class="card shadow-lg visually-hidden" id="fileAndNumber">
                         <div class="card-body p-6">
-                        <div class="mb-3">
+                            <div class="mb-3">
                                 <a href="../index.php">
                                     <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
                                 </a>
@@ -114,7 +116,7 @@ if (isset($_SESSION['user_id'])) {
                     </div>
                     <div class="card shadow-lg visually-hidden" id="usernameAndEmail">
                         <div class="card-body p-6">
-                        <div class="mb-3">
+                            <div class="mb-3">
                                 <a href="../index.php">
                                     <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
                                 </a>
@@ -152,7 +154,7 @@ if (isset($_SESSION['user_id'])) {
                     </div>
                     <div class="card shadow-lg visually-hidden" id="passwordAndRetype">
                         <div class="card-body p-6">
-                        <div class="mb-3">
+                            <div class="mb-3">
                                 <a href="../index.php">
                                     <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
                                 </a>

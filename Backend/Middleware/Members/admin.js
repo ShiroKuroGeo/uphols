@@ -117,7 +117,7 @@ const Dashboard = createApp({
                     });
 
                     var xValues = ["Orders", "Products", "Users", "Recommendation"];
-                    var barColors = ["red", "green", "blue", "orange"];
+                    var barColors = ["#7DCEA0", "#27AE60", "#1E8449", "#145A32"];
 
 
                     new Chart("indexChart", {
@@ -357,6 +357,9 @@ const Customer = createApp({
                         toastr.danger('Status Not updated');
                     }
                 });
+        },
+        codeAt: function (code) {
+            return code.replace(/.(?=.{2})/g, "*");
         }
     },
     computed: {

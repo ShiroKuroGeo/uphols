@@ -9,10 +9,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Auth/AuthHeader
 <div id="auth-content">
     <div class="container-fluid vh-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-md-9 col-lg-6 col-xl-5 shadow me-5">
+            <div class="col-md-9 col-lg-6 col-xl-5 shadow">
                 <img src="/uphols/Assets/Images/illustrationUpholstery.png" class="img-fluid" alt="Sample image">
             </div>
-            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-auto border border-4 shadow-lg p-5 ms-5">
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 mt-auto border border-4 shadow-lg">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <div class="text-center">
@@ -21,8 +21,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Auth/AuthHeader
                                 <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" :style="'width: '+progressBarForResetPassword+'%'"></div>
                             </div>
                             <h2 class="text-center">Forgot Password?</h2>
-                            <p>Enter your email to confirm if you are already registered.</p>
-                            <!-- Enter existed Email to Reset Password -->
+                            <p>Enter your email to confirm if you are already registered.<br><span class="fw-bold">( Gmail Reset Password )</span></p>
                             <div class="panel-body" id="enterEmailToResetPassword">
                                 <div class="form">
                                     <fieldset>

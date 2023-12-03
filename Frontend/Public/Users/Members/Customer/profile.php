@@ -47,7 +47,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                     <nav class="navbar navbar-expand-md navbar-light shadow-sm mb-4 mb-lg-0 sidenav">
                         <a class="d-xl-none d-lg-none d-md-none text-inherit fw-bold" href="#">Menu</a>
                         <button class="navbar-toggler d-md-none icon-shape icon-sm rounded bg-primary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#sidenav" aria-controls="sidenav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="fe fe-menu"></span>
+                            <i class="fa fa-bars"></i>
                         </button>
                         <div class="collapse navbar-collapse" id="sidenav">
                             <div class="navbar-nav flex-column">

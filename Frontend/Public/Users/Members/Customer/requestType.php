@@ -89,11 +89,9 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                 </p>
                             </div>
                             <div class="d-flex justify-content-center mb-4">
-                                <span class="h3 mb-0 fw-bold">&#8369;</span>
                                 <div class="toggle-price-content odometer h1" data-price-monthly="39" data-price-yearly="99">
-                                    0
+                                    Free
                                 </div>
-                                <span class="align-self-end mb-1 ms-2 toggle-price-content">/Item</span>
                             </div>
                             <div class="d-grid">
                                 <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#schedule">Schedule Repair Request</a>

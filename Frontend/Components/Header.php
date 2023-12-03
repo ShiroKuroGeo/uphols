@@ -42,7 +42,7 @@ if (isset($_SESSION['user_id'])) {
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container p-3">
             <img src="/uphols/Assets/Images/mainLogo.png" width="90" alt="UpholsteryLogo">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
