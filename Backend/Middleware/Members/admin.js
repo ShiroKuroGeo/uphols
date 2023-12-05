@@ -202,7 +202,6 @@ const Customer = createApp({
             const vue = this;
             var data = new FormData();
             data.append("Method", "allUsers");
-
             axios.post('/uphols/Backend/Routes/Members/Admin/users.php', data)
                 .then(function (r) {
                     vue.UserCount = r.data.length;
@@ -773,7 +772,8 @@ const request = createApp({
                     if (r.data == 200) {
                         toastr.success('Costumize Project Form Successfully Sent to User');
                     } else {
-                        toastr.error('Costumize Project Form Failed Sent to User');
+                        // toastr.error('Costumize Project Form Failed Sent to User');
+                        alert(r.data);
                     }
                 })
         },

@@ -19,7 +19,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                             <span class="fs-6 text-uppercase fw-semibold">Members</span>
                                         </div>
                                         <div>
-                                            <span class="p-1 me-2 "><a href="Customers/index.php" class="text-light"><i class="fa-solid fa-users fa-2x" style="color: #023047;"></i></a></span>
+                                            <span class="p-1 me-2 "><a href="Customers/index.php" class="text-light"><i class="fa-solid fa-users fa-2x" style="color: #139a74;"></i></a></span>
                                         </div>
                                     </div>
                                     <h2 class="fw-bold mb-1">

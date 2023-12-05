@@ -50,7 +50,7 @@
         }
 
         private function storeScheduleRepairFunctionQuery(){
-            return 'UPDATE `request` SET `Types`= ? ,`color`= ? ,`fabric`= ? ,`message`= ? ,`paymentMethod`= ? ,`paymentTotalPrice`= ? , `date`= ?, `status` = 1 WHERE id = ?';
+            return 'UPDATE `request` SET `Types`= ? ,`color`= ? ,`fabric`= ? ,`message`= ? ,`paymentMethod`= ? ,`paymentTotalPrice`= ? , `dateDeliver`= ?, `status` = 1 WHERE id = ?';
         }
 
         private function scheduleRepairFunctionQuery(){
