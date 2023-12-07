@@ -107,10 +107,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Admin/a
                                                 <option value="0">{{ req.status == 5 ? 'Delivered' : req.status == 2 ? 'Approved' : req.status == 3 ? 'Scheduled' : req.status == 4 ? 'Deliver' : 'Pending' }}</option>
                                                 <option value="2" :disabled="selectStatusOption == 3">Mark as Approve</option>
                                                 <option value="3" :disabled="selectStatusOption == 2">Mark as Schedule</option>
-                                                <option value="4" :disabled="selectStatusOption == 4">Mark as Deliver</option>
+                                                <option value="4" :disabled="selectStatusOption == 5">Mark as Deliver</option>
                                                 <option value="5" :disabled="selectStatusOption == 4">Mark as Delivered</option>
                                             </select>
-                                            <input type="date" v-model="dateDeliver" :class="selectStatusOption == 3 && req.dateDeliver != 'Invalid Date' ? 'form-control form-control-sm' : 'form-control form-control-sm visually-hidden'">
+                                            <input type="date" v-model="dateDeliver" :class="selectStatusOption == 3 ? 'form-control form-control-sm' : 'form-control form-control-sm visually-hidden'">
                                             <button @click="updateStatus(req.id, req.email)" class="btn btn-sm btn-primary mt-2 col-12">Update</button>
                                         </td>
                                     </tr>
