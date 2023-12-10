@@ -66,7 +66,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                                 <th>Purchased</th>
                                                 <th>Quantity</th>
                                                 <th>Price</th>
-                                                <th>Revenue</th>
+                                                <th>Total</th>
                                                 <th>Order Status</th>
                                                 <th class="text-center">Action</th>
                                             </tr>
