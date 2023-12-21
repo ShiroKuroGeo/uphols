@@ -99,9 +99,9 @@ const CustomerLandingPage = createApp({
                     data.append('quantity', quantity);
                     axios.post('/uphols/Backend/Routes/Members/Customer/order.php', data)
                         .then(function (r) {
-                            if(r.data == 200){
+                            if (r.data == 200) {
 
-                            }else{
+                            } else {
                                 toastr.error('Purchasing Failed!');
                             }
                         });
@@ -113,9 +113,9 @@ const CustomerLandingPage = createApp({
                     data.append('quantity', quantity);
                     axios.post('/uphols/Backend/Routes/Members/Customer/order.php', data)
                         .then(function (r) {
-                            if(r.data == 200){
+                            if (r.data == 200) {
                                 toastr.success('Purchasing Success!');
-                            }else{
+                            } else {
                                 toastr.error('Purchasing Failed!');
                             }
                         });
@@ -480,7 +480,7 @@ const profileCustomer = createApp({
             customerAddress: [],
             address_idssss: [],
             customerInfoHeader: [],
-            citiesOfCordova: [{value: 'Talisay City', name: 'Talisay City'},{value: 'Minglanilla', name: 'Minglanilla'},{value: 'Naga City', name: 'Naga City'},{value: 'San Fernando', name: 'San Fernando'},{value: 'Carcar City', name: 'Carcar City'},{value: 'Sibonga', name: 'Sibonga'},{value: 'Dalaguete', name: 'Dalaguete'},{value: 'Alegria', name: 'Alegria'},{value: 'Santander', name: 'Santander'},{value: 'Dumanjug', name: 'Dumanjug'},{value: 'Argao', name: 'Argao'},{value: 'Alcantara', name: 'Alcantara'},{value: 'Alcoy', name: 'Alcoy'},{value: 'Boljoon', name: 'Boljoon'},{value: 'Malabuyoc', name: 'Malabuyoc'},{value: 'Ronda', name: 'Ronda'},{value: 'Badian', name: 'Badian'},{value: 'Samboan', name: 'Samboan'},{value: 'Oslob', name: 'Oslob'},{value: 'Moalboal', name: 'Moalboal'},{value: 'Ginatilan', name: 'Ginatilan'},{value: 'Aloguinsan', name: 'Aloguinsan'},{value: 'Asturias', name: 'Asturias'},{value: 'Tuburan', name: 'Tuburan'},{value: 'Barili', name: 'Barili'},{value: 'Balamban', name: 'Balamban'},{value: 'Toledo City', name: 'Toledo City'},{value: 'Pinamungahan', name: 'Pinamungahan'},{value: 'Santa Fe', name: 'Santa Fe'},{value: 'Tabogon', name: 'Tabogon'},{value: 'Madridejos', name: 'Madridejos'},{value: 'Bantayan', name: 'Bantayan'},{value: 'Bogo City', name: 'Bogo City'},{value: 'Medellin', name: 'Medellin'},{value: 'San Remigio', name: 'San Remigio'},{value: 'Tabuelan', name: 'Tabuelan'},{value: 'Daanbantayan', name: 'Daanbantayan'},{value: 'Catmon', name: 'Catmon'},{value: 'Poro', name: 'Poro'},{value: 'Borbon', name: 'Borbon'},{value: 'Danao City', name: 'Danao City'},{value: 'Pilar', name: 'Pilar'},{value: 'Sogod', name: 'Sogod'},{value: 'Tudela', name: 'Tudela'},{value: 'San Francisc', name: 'San Francisco'},{value: 'Carmen', name: 'Carmen'},{value: 'Compostela', name: 'Compostela'},{value: 'Liloan', name: 'Liloan'},{value: 'Cordova', name: 'Cordova'},{value: 'Consolacion', name: 'Consolacion'},{value: 'Mandaue City', name: 'Mandaue City'}],
+            citiesOfCordova: [{ value: 'Talisay City', name: 'Talisay City' }, { value: 'Minglanilla', name: 'Minglanilla' }, { value: 'Naga City', name: 'Naga City' }, { value: 'San Fernando', name: 'San Fernando' }, { value: 'Carcar City', name: 'Carcar City' }, { value: 'Sibonga', name: 'Sibonga' }, { value: 'Dalaguete', name: 'Dalaguete' }, { value: 'Alegria', name: 'Alegria' }, { value: 'Santander', name: 'Santander' }, { value: 'Dumanjug', name: 'Dumanjug' }, { value: 'Argao', name: 'Argao' }, { value: 'Alcantara', name: 'Alcantara' }, { value: 'Alcoy', name: 'Alcoy' }, { value: 'Boljoon', name: 'Boljoon' }, { value: 'Malabuyoc', name: 'Malabuyoc' }, { value: 'Ronda', name: 'Ronda' }, { value: 'Badian', name: 'Badian' }, { value: 'Samboan', name: 'Samboan' }, { value: 'Oslob', name: 'Oslob' }, { value: 'Moalboal', name: 'Moalboal' }, { value: 'Ginatilan', name: 'Ginatilan' }, { value: 'Aloguinsan', name: 'Aloguinsan' }, { value: 'Asturias', name: 'Asturias' }, { value: 'Tuburan', name: 'Tuburan' }, { value: 'Barili', name: 'Barili' }, { value: 'Balamban', name: 'Balamban' }, { value: 'Toledo City', name: 'Toledo City' }, { value: 'Pinamungahan', name: 'Pinamungahan' }, { value: 'Santa Fe', name: 'Santa Fe' }, { value: 'Tabogon', name: 'Tabogon' }, { value: 'Madridejos', name: 'Madridejos' }, { value: 'Bantayan', name: 'Bantayan' }, { value: 'Bogo City', name: 'Bogo City' }, { value: 'Medellin', name: 'Medellin' }, { value: 'San Remigio', name: 'San Remigio' }, { value: 'Tabuelan', name: 'Tabuelan' }, { value: 'Daanbantayan', name: 'Daanbantayan' }, { value: 'Catmon', name: 'Catmon' }, { value: 'Poro', name: 'Poro' }, { value: 'Borbon', name: 'Borbon' }, { value: 'Danao City', name: 'Danao City' }, { value: 'Pilar', name: 'Pilar' }, { value: 'Sogod', name: 'Sogod' }, { value: 'Tudela', name: 'Tudela' }, { value: 'San Francisc', name: 'San Francisco' }, { value: 'Carmen', name: 'Carmen' }, { value: 'Compostela', name: 'Compostela' }, { value: 'Liloan', name: 'Liloan' }, { value: 'Cordova', name: 'Cordova' }, { value: 'Consolacion', name: 'Consolacion' }, { value: 'Mandaue City', name: 'Mandaue City' }],
             user_id: '',
             firstname: '',
             lastname: '',
@@ -810,24 +810,24 @@ const profileCustomer = createApp({
                 })
         },
         changeOldCode: function (id, old) {
-            if(id == old){
+            if (id == old) {
                 var vue = this;
                 var data = new FormData();
                 data.append('Method', 'changeOldCode');
                 data.append('oldCode', id);
                 axios.post('/uphols/Backend/Routes/Members/Customer/profile.php', data)
                     .then(function (r) {
-                        if(r.data == 200){
+                        if (r.data == 200) {
                             document.getElementById('TheSameOldCode').classList.remove('visually-hidden');
                             window.location.reload();
-                        }else{
+                        } else {
                             toastr.error("Code Not Updated!");
                         }
                     })
-            }else{
+            } else {
                 document.getElementById('NotTheSameOldCode').classList.remove('visually-hidden');
             }
-            
+
         },
     },
     created: function () {
@@ -1047,7 +1047,7 @@ const customerOrder = createApp({
             var data = new FormData();
             data.append('Method', 'cancelOrder');
             data.append('orderId', id);
-            axios.post('/Uphols/backend/Routes/Members/customer/order.php', data)   
+            axios.post('/Uphols/backend/Routes/Members/customer/order.php', data)
                 .then(function (r) {
                     vue.getCustomerOrder();
                 })
@@ -1067,7 +1067,7 @@ const customerOrder = createApp({
             let d = new Date(date);
             return d.toDateString();
         },
-        getId: function (id){
+        getId: function (id) {
             var vue = this;
             vue.idCancel = id;
         },
@@ -1176,7 +1176,7 @@ const request = createApp({
                     if (r.data == 200) {
                         toastr.success('Costumize Project Form Successfully Sent to Admin');
                         setTimeout(window.location.reload(), 5000);
-                    } else if(r.data == 400) {
+                    } else if (r.data == 400) {
                         toastr.error('Costumize Project Form Failed Sent to Admin');
                         setTimeout(window.location.reload(), 5000);
                     } else {
@@ -1192,12 +1192,12 @@ const request = createApp({
             axios.post('/uphols/Backend/Routes/Members/Customer/request.php', data)
                 .then(function (r) {
                     let rd = r.data;
-
-                    if (rd == 200) {
-                        window.location.href = "myorders.php";
-                    } else {
-                        toastr.error('Cannot schedule this time. Please contact us.');
-                    }
+                    alert(rd);
+                    // if (rd == 200) {
+                    //     window.location.href = "myorders.php";
+                    // } else {
+                    //     toastr.error('Cannot schedule this time. Please contact us.');
+                    // }
 
                 })
         },
@@ -1219,7 +1219,7 @@ const request = createApp({
             const selectedDesign = this.design.find(d => d.fabric === newtype);
             this.cheque += selectedDesign ? selectedDesign.fabricPrice : null;
         },
-        
+
     },
     created: function () {
         this.getUserAddress();

@@ -913,14 +913,14 @@ const product = createApp({
             e.preventDefault();
             var vue = this;
             var form = e.currentTarget;
-            console.log(form);
             var data = new FormData(form);
             data.append('Method', 'getStoreProduct');
             axios.post('/uphols/Backend/Routes/Members/admin/product.php', data)
                 .then(function (r) {
                     if (r.data == 200) {
                         toastr.success('Successfully added to list.');
-                        vue.getStoreProduct();
+                        // vue.getStoreProduct();
+                        window.location.href = "index.php";
                     } else {
                         toastr.error("Product cannot add!");
                     }

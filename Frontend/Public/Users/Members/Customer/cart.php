@@ -67,8 +67,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                         <div class="border-top pt-4 mx-4 mb-4">
                             <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
                             <p class="text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                aliquip
+                                Deliveries are typically fulfilled based on the selected shipping method during checkout, 
+                                with standard options taking several business days and expedited services ensuring quicker 
+                                arrival for an extra fee. Once an order is processed, a tracking number is usually provided,
+                                 allowing customers to monitor the shipment's progress until it reaches its destination.    
                             </p>
                         </div>
                     </div>

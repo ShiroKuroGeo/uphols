@@ -204,7 +204,8 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-4">
                             <div class="d-flex align-items-center">
                                 <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 ">
-                                    <i class="fe fe-video"> </i></span>
+                                    <i class="fa fa-briefcase text-primary"></i>
+                                </span>
                                 <div class="ms-3">
                                     <h4 class="mb-0 fw-semibold">3 Years of business</h4>
                                     <p class="mb-0">Enjoy a variety of fresh furniture</p>
@@ -214,7 +215,7 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-xl-4 col-lg-4 col-md-6 mb-lg-0 mb-4">
                             <div class="d-flex align-items-center">
                                 <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 ">
-                                    <i class="fe fe-users"> </i></span>
+                                    <i class="fa fa-industry text-primary"></i></span>
                                 <div class="ms-3">
                                     <h4 class="mb-0 fw-semibold">Expert Maker</h4>
                                     <p class="mb-0">Right for you</p>
@@ -224,7 +225,7 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-xl-4 col-lg-4 col-md-12">
                             <div class="d-flex align-items-center">
                                 <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 ">
-                                    <i class="fe fe-clock"> </i></span>
+                                    <i class="fa fa-shield text-primary"></i>    </span>
                                 <div class="ms-3">
                                     <h4 class="mb-0 fw-semibold">6 Months warranty</h4>
                                     <p class="mb-0">Good warranty</p>
@@ -312,7 +313,7 @@ if (!isset($_SESSION['user_id'])) {
                             </span>
                             <figcaption class="info">
                                 <h6 class="title">Reasonable prices</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <p>Reasonably priced upholstery encompasses fabrics like cotton, polyester, and blends, offering durability and style without breaking the bank.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -323,7 +324,7 @@ if (!isset($_SESSION['user_id'])) {
                             </span>
                             <figcaption class="info">
                                 <h6 class="title">Best quality</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <p>Top-tier upholstery embodies luxurious fabrics like velvet, silk, and genuine leather, renowned for their opulence, durability, and timeless elegance.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -333,8 +334,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <i class="fas fa-plane fa-2x fa-fw text-primary floating"></i>
                             </span>
                             <figcaption class="info">
-                                <h6 class="title">Worldwide shipping</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <h6 class="title">Cebu Only Shipping</h6>
+                                <p>Cebu-only shipping denotes the exclusive delivery service restricted to the geographic confines of Cebu, ensuring prompt and localized shipping within this specific region.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -345,7 +346,7 @@ if (!isset($_SESSION['user_id'])) {
                             </span>
                             <figcaption class="info">
                                 <h6 class="title">Customer satisfaction</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <p>Customer satisfaction signifies the culmination of exceptional service, meeting or exceeding expectations, and fulfilling needs.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -356,7 +357,7 @@ if (!isset($_SESSION['user_id'])) {
                             </span>
                             <figcaption class="info">
                                 <h6 class="title">Happy customers</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <p>Happy customers are the heartbeat of any successful business, representing fulfilled needs, positive experiences, and loyalty.</p>
                             </figcaption>
                         </figure>
                     </div>
@@ -366,8 +367,8 @@ if (!isset($_SESSION['user_id'])) {
                                 <i class="fas fa-box fa-2x fa-fw text-primary floating"></i>
                             </span>
                             <figcaption class="info">
-                                <h6 class="title">Thousand items</h6>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                                <h6 class="title">Limited Items</h6>
+                                <p>Limited items refer to products or merchandise available in restricted quantities, often exclusive or rare.</p>
                             </figcaption>
                         </figure>
                     </div>
