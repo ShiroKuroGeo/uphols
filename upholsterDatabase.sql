@@ -54,6 +54,17 @@ CREATE TABLE `products` (
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+INSERT INTO `products` (`product_id`, `product_picture`, `productName`, `productDescription`, `productPrice`, `productQuantity`, `productStatus`, `productSales`, `created_at`, `updated_at`) VALUES
+(1, 'bedroom set of 4.jpg', 'bedroom sets of 4', 'This product is bedroom sets of 4.', 25000, 1, 1, 0, '2023-12-21 11:50:25', '2023-12-21 11:50:25'),
+(2, 'chair 2 set.jpg', 'chair set of 2', 'This chair is good for 2 people.', 10000, 1, 1, 0, '2023-12-21 11:51:04', '2023-12-21 11:51:04'),
+(3, 'chair set of 2.jpg', 'chair set of 2', 'This product is sets of 2 people.', 12000, 1, 1, 0, '2023-12-21 11:51:35', '2023-12-21 11:51:35'),
+(4, 'couple bed.jpg', 'Couple bed', 'This is a bed for couple.', 8000, 1, 1, 0, '2023-12-21 11:51:58', '2023-12-21 11:51:58'),
+(5, 'full set.jpg', 'Full set', 'full sets of products.', 25000, 5, 1, 0, '2023-12-21 11:53:42', '2023-12-21 11:53:42'),
+(6, 'ottoman.jpg', 'Ottomans', 'Ottomans is on sale.', 15000, 1, 1, 0, '2023-12-21 11:54:31', '2023-12-21 11:54:31'),
+(7, 'single chair.png', 'Single Chair', 'single chair for singles', 9000, 1, 1, 0, '2023-12-21 11:55:01', '2023-12-21 11:55:01'),
+(8, 'single set.jpg', 'Single chair blue', 'Single chair but color blue', 9000, 1, 1, 0, '2023-12-21 11:55:56', '2023-12-21 11:55:56'),
+(9, 'singlewhitechair.jpg', 'Single white chair', 'Single chair but white color.', 13000, 1, 1, 0, '2023-12-21 11:56:23', '2023-12-21 11:56:23');
+
 CREATE TABLE `recommendations` (
   `id` int(11) NOT NULL,
   `fullname` varchar(100) NOT NULL,
@@ -91,6 +102,14 @@ CREATE TABLE `requestform` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+INSERT INTO `requestform` (`requestForm_id`, `Types`, `Color`, `fabric`, `typePrice`, `colorPrice`, `fabricPrice`, `created_at`, `updated_at`) VALUES
+(1, 'Velvet', 'Rich jewel tones', 'Velvet', 1500, 300, 400, '2023-12-21 11:58:34', '2023-12-21 11:58:34'),
+(2, 'Leather', ' Brown, black, tan, or burgundy', 'Genuine or faux leather', 1000, 200, 300, '2023-12-21 11:59:21', '2023-12-21 11:59:21'),
+(3, 'Linen ', 'Natural hues like beige', 'Linen', 1000, 200, 420, '2023-12-21 12:00:32', '2023-12-21 12:00:32'),
+(4, 'Microfiber', 'Neutral tones like gray', 'Microfiber', 12000, 1299, 999, '2023-12-21 12:01:04', '2023-12-21 12:01:04'),
+(5, 'Polyester ', 'Wide range of colors', 'Polyester', 12999, 499, 699, '2023-12-21 12:01:33', '2023-12-21 12:01:33'),
+(6, 'Jacquard', 'Intricate patterns', 'Jacquard', 32559, 1450, 1250, '2023-12-21 12:02:15', '2023-12-21 12:02:15');
 
 CREATE TABLE `transactions` (
   `transac_id` int(11) NOT NULL,
