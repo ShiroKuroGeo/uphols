@@ -17,6 +17,8 @@ const CustomerLandingPage = createApp({
             productStatus: '',
             productSales: '',
             role: '',
+            quantityVal: 1,
+            productQuantityShow: 0,
         }
     },
     methods: {
@@ -49,6 +51,12 @@ const CustomerLandingPage = createApp({
                     }
                 })
         },
+        plus() {
+            this.quantityVal = this.quantityVal + 1;
+        },
+        minus() {
+            this.quantityVal = this.quantityVal - 1;
+        },
         addToCart: function (product_id) {
             var data = new FormData();
             data.append('Method', 'storeCart');
@@ -71,13 +79,13 @@ const CustomerLandingPage = createApp({
                 .then(function (r) {
                     vue.showToBuy = [];
                     for (var p of r.data) {
+                        vue.productQuantityShow = p.productQuantity;
                         vue.showToBuy.push({
                             product_id: p.product_id,
                             product_picture: p.product_picture,
                             productName: p.productName,
                             productDescription: p.productDescription,
                             productPrice: p.productPrice,
-                            productQuantity: p.productQuantity,
                             productQuantity: p.productQuantity,
                             productStatus: p.productStatus,
                             productSales: p.productSales,
@@ -187,6 +195,7 @@ const CustomerCart = createApp({
             role: '',
             countTotalSelected: 0,
             itemSelected: 0,
+            thisQuantity: 2,
         }
     },
     methods: {
@@ -212,6 +221,14 @@ const CustomerCart = createApp({
                     }
                 })
         },
+        plusc(index, id) {
+            this.carts[index].quantityCart++;
+            this.updateThisCartQuality(id, this.carts[index].quantityCart++);
+        },
+        minusc(index, id) {
+            this.carts[index].quantityCart--;
+            this.updateThisCartQuality(id, this.carts[index].quantityCart--);
+        },
         selectedToRemoveItem: function (id) {
             this.itemSelected = id;
         },
@@ -227,6 +244,7 @@ const CustomerCart = createApp({
                             cart_id: p.cart_id,
                             user_id: p.user_id,
                             product_id: p.product_id,
+                            productQuantity: p.productQuantity,
                             quantityCart: p.quantityCart,
                             statusCart: p.statusCart,
                             product_picture: p.product_picture,
@@ -360,12 +378,12 @@ const CustomerCart = createApp({
                     }
                 });
         },
-        updateThisCartQuality: function (cart_id) {
+        updateThisCartQuality: function (cart_id, quantity) {
             var vue = this;
             var data = new FormData();
-            let quantity = document.getElementById(cart_id);
+            // let quantity = document.getElementById(cart_id);
             data.append('Method', 'updateThisCartQuality');
-            data.append('quantity', quantity.value);
+            data.append('quantity', quantity);
             data.append('cart_id', cart_id);
             axios.post('/uphols/Backend/Routes/Members/Customer/cart.php', data)
                 .then(function (r) {
@@ -1180,7 +1198,7 @@ const request = createApp({
                         toastr.error('Costumize Project Form Failed Sent to Admin');
                         setTimeout(window.location.reload(), 5000);
                     } else {
-                        window.open(r.data, '_blank');
+                        location.assign(r.data);
                     }
                 })
         },
@@ -1192,12 +1210,11 @@ const request = createApp({
             axios.post('/uphols/Backend/Routes/Members/Customer/request.php', data)
                 .then(function (r) {
                     let rd = r.data;
-                    alert(rd);
-                    // if (rd == 200) {
-                    //     window.location.href = "myorders.php";
-                    // } else {
-                    //     toastr.error('Cannot schedule this time. Please contact us.');
-                    // }
+                    if (rd == 200) {
+                        window.location.href = "myorders.php";
+                    } else {
+                        toastr.error('Cannot schedule this time. Please contact us.');
+                    }
 
                 })
         },

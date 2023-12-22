@@ -55,13 +55,14 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                             <div class="col-md-8"></div>
                             <div class="col-12">
                                 <div class="float-start fw-bold text-dark my-auto">
-                                    <select class="form-control" v-model="totalCheque" @change="totalChequePayment" >
-                                        <option :value="cheque">Down Payment: &#8369;{{ cheque }}</option>
-                                        <option :value="chequeDown">Whole Payment &#8369;{{ chequeDown }}</option>
+                                    <select class="form-control" v-model="totalCheque" @change="totalChequePayment">
+                                        <option value="0">Selected Pay: &#8369;{{ cheque }}</option>
+                                        <option :value="chequeDown">Down Payment: &#8369;{{ chequeDown }}</option>
+                                        <option :value="cheque">Whole Payment &#8369;{{ cheque }}</option>
                                     </select>
                                 </div>
                                 <div class="buttons float-end">
-                                    <button class="btn btn-primary" type="submit">Submit</button>
+                                    <button class="btn btn-primary" type="submit" :disabled="totalCheque == 0">Submit</button>
                                     <button type="button" class="btn btn-outline-primary ms-2 " data-bs-dismiss="offcanvas" aria-label="Close">Close</button>
                                 </div>
                             </div>

@@ -225,7 +225,7 @@ if (!isset($_SESSION['user_id'])) {
                         <div class="col-xl-4 col-lg-4 col-md-12">
                             <div class="d-flex align-items-center">
                                 <span class="icon-shape icon-lg bg-light-warning rounded-circle text-center text-dark-warning fs-4 ">
-                                    <i class="fa fa-shield text-primary"></i>    </span>
+                                    <i class="fa fa-shield text-primary"></i> </span>
                                 <div class="ms-3">
                                     <h4 class="mb-0 fw-semibold">6 Months warranty</h4>
                                     <p class="mb-0">Good warranty</p>
@@ -279,7 +279,11 @@ if (!isset($_SESSION['user_id'])) {
                                                     <form @submit="buyProduct(pro.product_id)">
                                                         Product Name : {{ pro.productName }} <br>
                                                         Product Price : {{ pro.productPrice }} <br>
-                                                        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Quantity">
+                                                        <div class="d-flex my-2">
+                                                            <button type="button" :disabled="quantityVal >= productQuantityShow" @click="plus" class="btn btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                                            <input type="number" name="quantity" id="quantity" class="form-control" :value="quantityVal" placeholder="Quantity" readonly>
+                                                            <button type="button" :disabled="quantityVal <= 1" @click="minus" class="btn btn-sm"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                                                        </div>
                                                         Select Address
                                                         <select name="address" class="form-control form-control-sm" v-model="role" id="address" required>
                                                             <option value="">Select Address</option>

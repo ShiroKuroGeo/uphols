@@ -69,7 +69,7 @@
         }
 
         private function viewCartQuery(){
-            return "SELECT c.cart_id, c.user_id, c.product_id, c.quantityCart, c.statusCart, p.product_picture, p.productName, p.productPrice FROM `carts` as c INNER JOIN `products` as p ON c.product_id = p.product_id WHERE c.user_id = ? ORDER BY c.created_at DESC;";
+            return "SELECT c.cart_id, c.user_id, c.product_id, c.quantityCart, c.statusCart, p.product_picture, p.productName, p.productPrice, p.productQuantity FROM `carts` as c INNER JOIN `products` as p ON c.product_id = p.product_id WHERE c.user_id = ? ORDER BY c.created_at DESC;";
         }
 
         private function totalPriceCartsQuery(){

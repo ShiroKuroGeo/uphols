@@ -31,8 +31,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-12 d-flex flex-row flex-lg-column flex-xl-row text-nowrap ">
-                                    <div class="col-4 me-1">
-                                        <input type="number" name="quantity" :id="c.cart_id" :value="c.quantityCart" class="form-control form-control-sm">
+                                    <div class="d-flex col-4 me-1">
+                                        <button type="button" :disabled="c.quantityCart >= c.productQuantity" @click="plusc(index, c.cart_id)" class="btn btn-sm"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                                        <input type="number" name="quantity" :id="c.cart_id" :value="c.quantityCart" @change="updateThisCartQuality(c.cart_id)" class="form-control">
+                                        <button type="button" :disabled="c.quantityCart <= 1" @click="minusc(index, c.cart_id)" class="btn btn-sm"><i class="fa fa-minus" aria-hidden="true"></i></button>
                                     </div>
                                     <small class="col-4">
                                         <text class="h6">&#8369; {{ c.productPrice * c.quantityCart }}</text> <br />
@@ -40,7 +42,7 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                                     </small>
                                     <div class="col-4">
                                         <div class=" d-flex justify-content-end align-items-end">
-                                            <a @click="updateThisCartQuality(c.cart_id)" class="btn btn-sm btn-light icon-hover-primary">Update</a>
+                                            <!-- <a @click="updateThisCartQuality(c.cart_id)" class="btn btn-sm btn-light icon-hover-primary">Update</a> -->
                                             <button data-bs-toggle="modal" data-bs-target="#removeItemCart" class="btn btn-sm btn-light text-danger icon-hover-danger" @click="selectedToRemoveItem(c.cart_id)">Remove</button>
 
                                             <div class="modal fade" id="removeItemCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -67,10 +69,10 @@ include($_SERVER['DOCUMENT_ROOT'] . '/uphols/Frontend/Components/Members/Custome
                         <div class="border-top pt-4 mx-4 mb-4">
                             <p><i class="fas fa-truck text-muted fa-lg"></i> Free Delivery within 1-2 weeks</p>
                             <p class="text-muted">
-                                Deliveries are typically fulfilled based on the selected shipping method during checkout, 
-                                with standard options taking several business days and expedited services ensuring quicker 
+                                Deliveries are typically fulfilled based on the selected shipping method during checkout,
+                                with standard options taking several business days and expedited services ensuring quicker
                                 arrival for an extra fee. Once an order is processed, a tracking number is usually provided,
-                                 allowing customers to monitor the shipment's progress until it reaches its destination.    
+                                allowing customers to monitor the shipment's progress until it reaches its destination.
                             </p>
                         </div>
                     </div>
